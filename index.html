@@ -1,0 +1,1113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dr. Umesh Dhawan — Inflammation Resolution &amp; Immunology</title>
+<meta name="description" content="Dr. Umesh Dhawan, immunologist at The Francis Crick Institute — inflammation resolution, cardiovascular disease, lupus, and fungal immunity.">
+<!-- Science.org-style editorial typography: Noto Serif (headlines/decks) + Libre Franklin (labels/body) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Noto+Serif:ital,wght@0,400;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    /* Science.org editorial palette */
+    --paper:     #ffffff;          /* page + card white */
+    --shell:     #f4f4f4;          /* neutral light-gray section */
+    --shell-2:   #ececec;          /* slightly deeper gray */
+    --grad-1:    #7a0c1c;
+    --grad-2:    #c8102e;          /* Science red */
+    --grad-3:    #e24a4a;
+    --accent:    #c8102e;          /* Science red */
+    --accent-hov:#9e0c22;
+    --accent-2:  #d83a3a;
+    --accent-soft:#9a1f2b;         /* muted red for labels on light */
+    --light:     #f4f4f4;
+    --card:      #ffffff;
+    --ink:       #1a1a1a;          /* near-black headlines */
+    --ink-soft:  #45464a;
+    --ink-faint: #77797e;
+    --line:      #e5e5e5;          /* thin neutral rule */
+    --line-dk:   rgba(0,0,0,.12);
+    --serif:     "Noto Serif", Georgia, "Times New Roman", Cambria, "Liberation Serif", serif;
+    --sans:      "Libre Franklin", "Segoe UI", system-ui, -apple-system, Roboto, Helvetica, Arial, sans-serif;
+    --maxw:      100%;
+    --radius:    0;
+    --gutter:    clamp(24px, 4.5vw, 96px);
+  }
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
+  }
+  section[id], header[id] { scroll-margin-top: 76px; }
+  body {
+    margin: 0;
+    font-family: var(--sans);
+    background: var(--paper);
+    color: var(--ink);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    padding: 0;
+  }
+  .frame { max-width: var(--maxw); margin: 0 auto; }
+  a { text-decoration: none; color: inherit; }
+  h1, h2, h3 { font-family: var(--serif); font-weight: 700; letter-spacing: -.01em; line-height: 1.08; margin: 0; }
+  .eyebrow { font-family: var(--sans); text-transform: uppercase; letter-spacing: 2px; font-size: .72rem; font-weight: 800; }
+
+  /* ---- panels ---- */
+  .panel { border-radius: var(--radius); overflow: hidden; margin-bottom: 0; }
+  .panel-pad { padding: clamp(68px, 6vw, 128px) var(--gutter); }
+
+  /* ---- pills / buttons ---- */
+  .pill {
+    display: inline-flex; align-items: center; gap: 9px;
+    padding: 11px 20px; border-radius: 0; font-size: .82rem; font-weight: 600;
+    letter-spacing: .02em; transition: transform .15s ease, background .15s ease, color .15s ease;
+    white-space: nowrap;
+  }
+  .pill:hover { transform: translateY(-2px); }
+  .pill-dark { background: var(--accent); color: #fff; }
+  .pill-dark:hover { background: var(--accent-hov); }
+  .pill-light { background: var(--ink); color: #fff; }
+  .pill-accent { background: var(--accent); color: #fff; }
+  .pill-accent:hover { background: var(--accent-hov); }
+  .pill-ghost { background: rgba(255,255,255,.06); color: #fff; border: 1px solid rgba(255,255,255,.22); }
+  .pill-ghost:hover { background: rgba(255,255,255,.14); border-color: var(--accent-2); color: #fff; }
+  .hex { width: 30px; height: 30px; display: inline-grid; place-items: center;
+    background: var(--accent); color:#fff; clip-path: polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%); }
+
+  /* ========== HERO (black) ========== */
+  .hero { position: relative; color: #fff; isolation: isolate; background: #0e0f11; }
+  .hero-inner { position: relative; z-index: 2; padding: 34px var(--gutter) 60px; }
+  /* thin red masthead rule under the top nav, Science style */
+  .hero-inner > nav { border-bottom: 3px solid var(--accent); padding-bottom: 18px; }
+
+  nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+  .brand { display:flex; align-items:center; gap:12px; }
+  .brand .mark { width:38px; height:38px; display:grid; place-items:center;
+    background: var(--accent); border:1px solid var(--accent); border-radius: 0; }
+  .brand .mark svg { width:20px; height:20px; stroke:#fff; }
+  .brand .name { font-weight:800; letter-spacing:.14em; font-size:.82rem; text-transform:uppercase; color:#fff; }
+  .brand .sub  { font-size:.66rem; letter-spacing:.14em; color:var(--accent-2); text-transform:uppercase; }
+  .nav-actions { display:flex; align-items:center; gap:10px; }
+
+  /* ---- sticky navbar (reveals after hero scrolls away) ---- */
+  .stickynav { position:fixed; top:0; left:0; right:0; z-index:60;
+    background:rgba(255,255,255,.9); -webkit-backdrop-filter:blur(12px); backdrop-filter:blur(12px);
+    border-bottom:1px solid var(--line); box-shadow:0 1px 0 rgba(0,0,0,.02), 0 8px 24px rgba(0,0,0,.05);
+    transform:translateY(-100%); opacity:0; visibility:hidden;
+    transition:transform .35s cubic-bezier(.2,.7,.3,1), opacity .35s ease, visibility .35s; }
+  .stickynav.show { transform:translateY(0); opacity:1; visibility:visible; }
+  .sn-inner { max-width:var(--maxw); margin:0 auto; display:flex; align-items:center;
+    justify-content:space-between; gap:16px; padding:11px var(--gutter);
+    border-top:3px solid var(--accent); }
+  .sn-brand { color:var(--ink); font-weight:800; letter-spacing:.12em; text-transform:uppercase; font-size:.8rem; }
+  .sn-links { display:flex; align-items:center; gap:4px; }
+  .sn-links a { color:var(--ink-soft); font-size:.82rem; font-weight:600; padding:8px 13px;
+    transition:color .15s ease, background .15s ease; }
+  .sn-links a:hover { color:var(--accent); background:var(--shell); }
+  .sn-links a.active { color:var(--accent); background:var(--shell); }
+  .sn-links a.sn-cta { background:var(--accent); color:#fff; }
+  .sn-links a.sn-cta:hover { background:var(--accent-hov); color:#fff; }
+  @media (max-width:640px){ .sn-links a.hidesm { display:none; } }
+
+  .hero-main { display:grid; grid-template-columns: 1.4fr 1fr; gap:40px; align-items:end; margin-top:56px; }
+  .hero-eyebrow { display:inline-flex; align-items:center; gap:10px; margin-bottom:22px;
+    color:var(--accent-2); }
+  .hero-eyebrow::before { content:""; width:26px; height:2px; background:var(--accent-2); }
+  .hero h1 { font-size: clamp(2.6rem, 5.6vw, 5.6rem); font-weight: 700; letter-spacing:-.02em; line-height:1.02; color:#fff; }
+  .hero h1 .hl { color: var(--accent-2); font-weight: 700; }
+  .hero .roleline { margin-top:22px; font-size:1rem; color:#c3c7ce; font-weight:600; letter-spacing:.01em; }
+  .hero-right { padding-bottom:8px; }
+  .hero-right p { font-family:var(--serif); color: #cfd3da; font-size:1.12rem; line-height:1.5; max-width:44ch; margin:0 0 22px; }
+  /* ---- hero figure (graphical abstract) ---- */
+  .hero-figure { margin:44px 0 0; border-radius: 0; overflow:hidden;
+    border:1px solid rgba(255,255,255,.14); background:#0e1013;
+    box-shadow:0 20px 44px rgba(0,0,0,.4); }
+  .hero-figure img { display:block; width:100%; height:auto;
+    transition: transform .5s cubic-bezier(.2,.7,.3,1); }
+  .hero-figure a { display:block; overflow:hidden; }
+  .hero-figure a:hover img { transform: scale(1.02); }
+  .hero-figure figcaption { display:flex; align-items:center; justify-content:space-between;
+    gap:18px; flex-wrap:wrap; padding:14px 20px; background:rgba(255,255,255,.03);
+    border-top:1px solid rgba(255,255,255,.12); }
+  .hero-figure .cap-t { font-size:.8rem; color:#c3c7ce; max-width:78ch; }
+  .hero-figure .cap-t b { color:#fff; font-weight:700; }
+  .hero-figure .cap-l { font-size:.72rem; font-weight:700; letter-spacing:.1em;
+    text-transform:uppercase; color:var(--accent-2); white-space:nowrap; }
+  .hero-figure .cap-l:hover { color:#fff; }
+
+  /* ========== METRICS ribbon ========== */
+  .hero-metrics { position:relative; z-index:2; display:grid; grid-template-columns:repeat(4,1fr);
+    gap:1px; background:rgba(255,255,255,.1); border-top:1px solid rgba(255,255,255,.1); }
+  .hero-metrics .m { background: rgba(255,255,255,.03);
+    padding:26px clamp(28px, 2.6vw, 60px); }
+  .hero-metrics .num { font-family:var(--serif); font-size:2.1rem; font-weight:700; letter-spacing:-.01em; color:var(--accent-2); }
+  .hero-metrics .lbl { font-size:.7rem; text-transform:uppercase; letter-spacing:1.5px; color:#9aa0a8; margin-top:2px; }
+
+  /* ========== PUBLISHED-IN LOGO BAND ========== */
+  .logos-band { background:var(--paper); border-top:1px solid var(--line); border-bottom:1px solid var(--line);
+    padding:clamp(48px,4.4vw,80px) var(--gutter); }
+  .logos-band .lb-head { text-align:center; margin-bottom:clamp(24px,2.6vw,38px); }
+  .logos-band .eyebrow { color:var(--accent); display:block; margin-bottom:8px; }
+  .logos-band .lb-head h2 { font-size:clamp(1.4rem,2.4vw,1.9rem); color:var(--ink); }
+  .logo-wall { display:flex; flex-wrap:wrap; align-items:center; justify-content:center;
+    gap:clamp(28px,5vw,72px); max-width:1100px; margin:0 auto; }
+  .logo-item { display:flex; align-items:center; justify-content:center; height:50px; }
+  .logo-item img { max-height:44px; max-width:150px; width:auto; height:auto;
+    filter:grayscale(1); opacity:.5; transition:filter .25s ease, opacity .25s ease, transform .25s ease; }
+  .logo-item:hover img { filter:grayscale(0); opacity:1; transform:translateY(-2px); }
+  .logo-item.tall img { max-height:50px; }
+
+  /* ========== SPLIT (research + portrait) ========== */
+  .split { display:grid; grid-template-columns: 1.15fr 1fr; background:var(--light); }
+  .split-left { padding: clamp(64px, 5.5vw, 116px) var(--gutter) clamp(60px, 5vw, 100px); }
+  .split-left h2 { font-size:2rem; color:var(--ink); margin-bottom:6px; }
+  .split-left .eyebrow { color:var(--accent); margin-bottom:14px; }
+  .areas { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:14px; margin-top:26px; }
+  .area { background:#fff; border:1px solid var(--line); border-radius: 0; padding:18px;
+    transition:transform .15s ease, box-shadow .15s ease; }
+  .area:hover { transform:translateY(-3px); box-shadow:0 14px 30px rgba(13,27,42,.09); }
+  .area .chip { width:38px; height:38px; display:grid; place-items:center; margin-bottom:12px;
+    background: linear-gradient(135deg, var(--grad-2), var(--grad-1)); color:#fff;
+    clip-path: polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%); }
+  .area .chip svg { width:19px; height:19px; }
+  .area h3 { font-size:1rem; color:var(--ink); margin-bottom:5px; letter-spacing:-.01em; }
+  .area p { font-size:.83rem; color:var(--ink-soft); line-height:1.5; margin:0; }
+
+  .portrait { position:relative; min-height:100%; background:#e8e8e8; overflow:hidden; }
+  .portrait img { width:100%; height:100%; object-fit:contain; object-position:center;
+    filter: saturate(1.06) contrast(1.03); }
+  .portrait::after { content:""; position:absolute; inset:0; pointer-events:none;
+    background: linear-gradient(180deg, rgba(0,0,0,.34) 0%, transparent 24%, transparent 66%, rgba(0,0,0,.5) 100%); }
+  .portrait .plabel { position:absolute; z-index:2; left:26px; bottom:24px; color:#fff; }
+  .portrait .plabel .nm { font-weight:800; letter-spacing:.12em; font-size:.9rem; text-transform:uppercase; }
+  .portrait .plabel .rl { font-size:.72rem; letter-spacing:.08em; color:#e4eefa; text-transform:uppercase; margin-top:3px; }
+  .portrait .quote { position:absolute; z-index:2; left:26px; top:26px; right:26px; color:#fff;
+    font-size:1.02rem; font-weight:700; line-height:1.3; letter-spacing:-.01em; text-shadow:0 2px 12px rgba(0,0,0,.35); }
+
+  /* ========== PUBLICATIONS ========== */
+  .pubs { background:#fff; border-top:1px solid var(--line); }
+  .pubs .head { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:26px; flex-wrap:wrap; }
+  .pubs h2 { font-size:2rem; color:var(--ink); }
+  .pubs .eyebrow { color:var(--accent); margin-bottom:10px; }
+  .pub { display:grid; grid-template-columns:clamp(200px, 16vw, 300px) 1fr; gap:22px; align-items:stretch;
+    border:1px solid var(--line); border-radius: 0; overflow:hidden; margin-bottom:16px;
+    transition:transform .15s ease, box-shadow .15s ease; background:#fff; }
+  .pub:hover { transform:translateY(-3px); box-shadow:0 16px 34px rgba(13,27,42,.10); }
+  .pub-figure { position:relative; min-height:158px; background:var(--shell-2); }
+  .pub-figure svg { display:block; width:100%; height:100%; filter:hue-rotate(145deg) saturate(1.05); }
+  .pub-figure img { display:block; width:100%; height:100%; object-fit:cover; object-position:center; }
+  .pub .pub-cites { display:inline-flex; align-items:baseline; gap:6px; margin-top:12px;
+    font-size:.66rem; font-weight:700; text-transform:uppercase; letter-spacing:.8px; color:var(--ink-faint);
+    background:var(--shell); border:1px solid var(--line); padding:5px 11px; }
+  .pub .pub-cites .n { font-family:var(--serif); font-size:.98rem; font-weight:700; line-height:1;
+    letter-spacing:0; text-transform:none; color:var(--accent); }
+  .pub-body { padding:22px 24px 22px 2px; align-self:center; }
+  .pub h3 { font-size:1.05rem; color:var(--ink); line-height:1.32; margin-bottom:7px; letter-spacing:-.01em; max-width:76ch; }
+  .pub h3 a:hover { color:var(--accent); }
+  .pub h3 a::after { content:" ↗"; font-size:.78em; color:var(--ink-faint); }
+  .pub .authors { font-size:.86rem; color:var(--ink-soft); margin:0 0 3px; }
+  .pub .authors b { color:var(--ink); }
+  .pub .venue { font-size:.82rem; color:var(--ink-faint); margin:0; }
+  .pub .venue em { font-style:italic; color:var(--ink-soft); }
+  .pub .pub-logo { display:block; width:auto; height:auto; max-height:26px; max-width:132px; margin-top:14px; }
+  .pub .pub-logo.tall { max-height:38px; }
+  .pub .pub-credit { font-size:.68rem; color:var(--ink-faint); margin:8px 0 0; font-style:italic; }
+  .pub .pub-credit a { color:inherit; border-bottom:1px solid rgba(0,0,0,.18); }
+  .pub .pub-credit a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+
+  /* ========== UNPUBLISHED MANUSCRIPTS ========== */
+  .mss { background:var(--light); border-top:1px solid var(--line); }
+  .mss .head { display:flex; align-items:flex-end; justify-content:space-between; gap:20px; margin-bottom:12px; flex-wrap:wrap; }
+  .mss h2 { font-size:2rem; color:var(--ink); }
+  .mss .eyebrow { color:var(--accent); margin-bottom:10px; }
+  .mss .lede { font-family:var(--serif); font-size:1.06rem; line-height:1.55; color:var(--ink-soft); max-width:66ch; margin:0 0 34px; }
+
+  /* ---- manuscript cards ---- */
+  .ms-cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:20px; margin-top:6px; }
+  .mscard { background:var(--paper); border:1px solid var(--line); display:flex; flex-direction:column;
+    transition:transform .15s ease, box-shadow .15s ease; }
+  .mscard:hover { transform:translateY(-4px); box-shadow:0 18px 38px rgba(0,0,0,.10); }
+  .mscard-img { position:relative; display:block; aspect-ratio:16/10; overflow:hidden;
+    background:var(--shell-2); border-bottom:1px solid var(--line); }
+  .mscard-img img { width:100%; height:100%; object-fit:cover; display:block;
+    transition:transform .5s cubic-bezier(.2,.7,.3,1); }
+  .mscard:hover .mscard-img img { transform:scale(1.04); }
+  .mscard-badge { position:absolute; top:12px; left:12px; z-index:2; font-family:var(--sans);
+    font-size:.58rem; font-weight:800; letter-spacing:.8px; text-transform:uppercase; color:#fff;
+    background:var(--accent); padding:6px 10px; }
+  .mscard-badge.prep { background:rgba(26,26,26,.82); }
+  .mscard-body { padding:20px 22px 22px; display:flex; flex-direction:column; flex:1; }
+  .mscard-body .ms-tags { margin-bottom:11px; }
+  .mscard-body h3 { font-size:1.04rem; line-height:1.34; color:var(--ink); margin-bottom:10px; }
+  .mscard-body p { font-size:.86rem; color:var(--ink-soft); line-height:1.56; margin:0 0 16px; }
+  .mscard-foot { margin-top:auto; display:flex; align-items:center; justify-content:space-between;
+    gap:12px; padding-top:14px; border-top:1px solid var(--line); }
+  .mscard-foot .by { font-size:.76rem; color:var(--ink-faint); }
+  .mscard-foot .by b { color:var(--ink); font-weight:600; }
+  .mscard-foot a, .mscard-foot .mscard-open { font-size:.76rem; font-weight:700; color:var(--accent); white-space:nowrap; }
+  .mscard { cursor:pointer; }
+  .mscard:hover .mscard-open { color:var(--accent-hov); }
+  .mscard:focus-visible { outline:2px solid var(--accent); outline-offset:3px; }
+
+  /* ---- manuscript detail modal ---- */
+  .ms-modal { position:fixed; inset:0; z-index:200; display:none; }
+  .ms-modal.open { display:block; }
+  .ms-modal-scroll { position:absolute; inset:0; overflow-y:auto; padding:5vh 16px 8vh;
+    background:rgba(20,12,14,.55); -webkit-backdrop-filter:blur(4px); backdrop-filter:blur(4px); }
+  .ms-modal-card { position:relative; margin:0 auto; max-width:940px; width:100%;
+    background:var(--paper); border:1px solid var(--line); box-shadow:0 30px 90px rgba(0,0,0,.45); }
+  .ms-modal-close { position:absolute; top:12px; right:12px; z-index:5; width:40px; height:40px;
+    border:0; cursor:pointer; background:rgba(26,26,26,.85); color:#fff; font-size:1.05rem;
+    display:grid; place-items:center; transition:background .15s ease; }
+  .ms-modal-close:hover { background:var(--accent); }
+  .ms-modal-body .ms-body { padding:clamp(26px,3vw,40px) clamp(24px,3vw,44px); }
+  .ms-modal-body .ms-figure video, .ms-modal-body .ms-figure img { max-height:68vh; }
+  .ms-modal-body .ms-pdf iframe { height:72vh; }
+  body.modal-open { overflow:hidden; }
+
+  .ms { background:#fff; border:1px solid var(--line); overflow:hidden; margin-bottom:22px; }
+  .ms:last-child { margin-bottom:0; }
+  .ms-body { padding:34px 38px; }
+  .ms-tags { display:flex; flex-wrap:wrap; gap:8px; margin-bottom:14px; }
+  .ms-tags .t { font-size:.62rem; font-weight:800; letter-spacing:1px; text-transform:uppercase;
+    color:var(--accent); background:rgba(200,16,46,.08); border:1px solid rgba(200,16,46,.28); padding:5px 10px; }
+  .ms-tags .t.status { color:var(--ink-soft); background:#eef1f5; border-color:var(--line); }
+  .ms-body h3 { font-size:1.22rem; color:var(--ink); line-height:1.3; letter-spacing:-.015em; margin-bottom:12px; max-width:78ch; }
+  .ms-body p { font-size:.9rem; color:var(--ink-soft); line-height:1.62; margin:0 0 14px; max-width:88ch; }
+  .ms-body p:last-child { margin-bottom:0; }
+  .ms-meta { font-size:.78rem; color:var(--ink-faint); }
+  .ms-meta b { color:var(--ink); font-weight:600; }
+  .ms-meta a { color:var(--accent); font-weight:600; border-bottom:1px solid rgba(200,16,46,.4); }
+  .ms-meta a:hover { color:var(--accent-hov); border-bottom-color:var(--accent); }
+  .ms-tags .t.status a { color:inherit; border-bottom:1px solid currentColor; }
+  .ms-tags .t.status a:hover { color:var(--accent); }
+  .ms-actions { margin-top:18px; display:flex; gap:10px; flex-wrap:wrap; }
+  .ms-link { display:inline-flex; align-items:center; gap:8px; font-size:.8rem; font-weight:700;
+    letter-spacing:.02em; padding:10px 16px; border:1px solid var(--line); color:var(--ink);
+    background:#fff; transition:transform .15s ease, border-color .15s ease, color .15s ease, background .15s ease; }
+  .ms-link:hover { transform:translateY(-2px); border-color:var(--accent); color:var(--accent); }
+  .ms-link.primary { background:var(--accent); color:#fff; border-color:var(--accent); }
+  .ms-link.primary:hover { background:var(--accent-hov); color:#fff; }
+  .ms-link svg { width:16px; height:16px; }
+
+  /* live-imaging video strip (Manuscript 1) */
+  .ms-figure { position:relative; background:#08131f; display:flex; align-items:center;
+    justify-content:center; padding:22px; border-top:1px solid var(--line); }
+  .ms-figure video, .ms-figure img { width:auto; max-width:100%; max-height:72vh; display:block; }
+  .ms-figure .mbadge { position:absolute; top:16px; left:16px; z-index:2; display:inline-flex;
+    align-items:center; gap:7px; font-size:.6rem; font-weight:800; letter-spacing:1.2px;
+    text-transform:uppercase; color:#fff; background:rgba(9,20,32,.62); backdrop-filter:blur(6px);
+    border:1px solid var(--line-dk); padding:6px 11px; }
+  .ms-figure .mbadge .dot { width:7px; height:7px; border-radius:50%; background:#ff5d5d;
+    box-shadow:0 0 0 0 rgba(255,93,93,.6); animation:livepulse 2s infinite; }
+  @keyframes livepulse { 0%{box-shadow:0 0 0 0 rgba(255,93,93,.55);} 70%{box-shadow:0 0 0 7px rgba(255,93,93,0);} 100%{box-shadow:0 0 0 0 rgba(255,93,93,0);} }
+
+  /* full-width still image (graphical abstract) */
+  .ms-shot { width:100%; background:#0e2338; border-top:1px solid var(--line); }
+  .ms-shot img { display:block; width:100%; height:auto; }
+
+  /* full-width embedded PDF */
+  .ms-pdf { width:100%; background:#525659; border-top:1px solid var(--line); }
+  .ms-pdf .pdf-bar { display:flex; align-items:center; justify-content:space-between; gap:14px;
+    flex-wrap:wrap; padding:11px 18px; background:#1a1a1a; color:#d8d8d8; }
+  .ms-pdf .pdf-bar span { font-size:.72rem; font-weight:700; letter-spacing:.1em; text-transform:uppercase; color:#e79aa2; }
+  .ms-pdf .pdf-bar a { font-size:.74rem; font-weight:700; color:#f0f0f0; }
+  .ms-pdf .pdf-bar a:hover { color:#fff; }
+  .ms-pdf iframe { display:block; width:100%; height:92vh; border:0; }
+
+  /* ========== ABOUT (editorial) ========== */
+  .about { background: var(--shell); color:var(--ink); position:relative; overflow:visible;
+    border-top:1px solid var(--line); }
+  .about .eyebrow { color:var(--accent); margin-bottom:14px; }
+  .about h2 { font-size:2rem; margin-bottom:20px; color:var(--ink); }
+  .about p { color:var(--ink-soft); max-width:64ch; margin:0 0 14px; font-size:.98rem; }
+  .about-narrative strong { color:var(--ink); font-weight:700; }
+  .about .journals { margin-top:26px; display:flex; flex-wrap:wrap; gap:10px; }
+  .about .jchip { font-size:.76rem; font-weight:600; padding:8px 14px; border-radius: 0;
+    background:var(--paper); border:1px solid var(--line); color:var(--ink-soft); }
+  .about-grid { display:grid; grid-template-columns:1.55fr 1fr; gap:44px; align-items:start; margin-top:6px; }
+  .about .pq { margin:24px 0 0; padding:6px 0 6px 22px; border-left:3px solid var(--accent);
+    font-family:var(--serif); font-size:1.14rem; font-style:italic; font-weight:500; line-height:1.5;
+    color:var(--ink); max-width:60ch; letter-spacing:-.01em; }
+  .cv { background:var(--paper); border:1px solid var(--line); padding:26px 28px;
+    position:sticky; top:92px; align-self:start; }
+  .cv h3 { font-family:var(--sans); font-size:.72rem; text-transform:uppercase;
+    letter-spacing:1.6px; color:var(--accent); font-weight:800; margin-bottom:18px; }
+  .cv .row { position:relative; padding:0 0 18px 22px; }
+  .cv .row::before { content:""; position:absolute; left:0; top:5px; width:9px; height:9px;
+    background:var(--accent); border-radius:50%; }
+  .cv .row::after { content:""; position:absolute; left:4px; top:14px; bottom:-4px; width:1px; background:var(--line); }
+  .cv .row:last-child { padding-bottom:0; }
+  .cv .row:last-child::after { display:none; }
+  .cv .step { display:block; font-weight:700; color:var(--ink); font-size:.9rem; line-height:1.3; }
+  .cv .where { display:block; color:var(--ink-soft); font-size:.78rem; margin-top:2px; }
+  .cv .where a { color:inherit; border-bottom:1px solid rgba(0,0,0,.2);
+    transition:color .15s ease, border-color .15s ease; }
+  .cv .where a:hover { color:var(--accent); border-bottom-color:var(--accent); }
+
+  /* ========== CONTACT ========== */
+  .contact { background:#fff; }
+  .contact .eyebrow { color:var(--accent); margin-bottom:12px; }
+  .contact h2 { font-size:2rem; color:var(--ink); margin-bottom:14px; }
+  .contact-lede { font-family:var(--serif); font-size:1.06rem; line-height:1.55; color:var(--ink-soft);
+    max-width:60ch; margin:0 0 34px; }
+  .cgrid { display:grid; grid-template-columns:repeat(4,1fr); gap:14px; }
+
+  /* ---- contact form ---- */
+  .contact-grid { display:grid; grid-template-columns:1.15fr .85fr; gap:clamp(30px,4vw,60px); align-items:start; }
+  .contact-form { display:flex; flex-direction:column; gap:16px; }
+  .cf-row { display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+  .cf-field { display:flex; flex-direction:column; gap:7px; }
+  .cf-field label { font-family:var(--sans); font-size:.68rem; font-weight:800; text-transform:uppercase;
+    letter-spacing:1.2px; color:var(--ink-soft); }
+  .cf-field input, .cf-field textarea { font-family:var(--sans); font-size:.92rem; color:var(--ink);
+    background:var(--paper); border:1px solid var(--line); border-radius:0; padding:12px 14px; width:100%;
+    transition:border-color .15s ease, box-shadow .15s ease; }
+  .cf-field input:focus, .cf-field textarea:focus { outline:none; border-color:var(--accent);
+    box-shadow:0 0 0 3px rgba(200,16,46,.12); }
+  .cf-field textarea { resize:vertical; min-height:130px; }
+  .cf-honey { position:absolute !important; left:-9999px !important; width:1px; height:1px; opacity:0; }
+  .cf-submit { align-self:flex-start; margin-top:2px; background:var(--accent); color:#fff; border:0; cursor:pointer;
+    font-family:var(--sans); font-weight:700; font-size:.85rem; letter-spacing:.02em; padding:13px 28px;
+    transition:background .15s ease, transform .15s ease; }
+  .cf-submit:hover { background:var(--accent-hov); transform:translateY(-2px); }
+  .cf-submit:disabled { opacity:.55; cursor:default; transform:none; }
+  .cf-note { font-size:.82rem; margin:2px 0 0; min-height:1em; }
+  .cf-note.ok  { color:#1a7f37; font-weight:600; }
+  .cf-note.err { color:var(--accent); font-weight:600; }
+  .contact-side { display:flex; flex-direction:column; gap:12px; }
+  .contact-side .ccard { padding:18px 20px; }
+  .ccard { display:block; border:1px solid var(--line); border-radius: 0; padding:20px;
+    transition:transform .15s ease, box-shadow .15s ease, border-color .15s; }
+  .ccard:hover { transform:translateY(-3px); box-shadow:0 14px 30px rgba(13,27,42,.08); border-color:var(--accent); }
+  .ccard .ic { width:40px; height:40px; display:grid; place-items:center; margin-bottom:14px;
+    background:linear-gradient(135deg,var(--grad-2),var(--grad-1)); color:#fff;
+    clip-path:polygon(25% 5%,75% 5%,100% 50%,75% 95%,25% 95%,0 50%); }
+  .ccard .ic svg { width:20px; height:20px; }
+  .ccard .k { font-size:.68rem; text-transform:uppercase; letter-spacing:1.4px; color:var(--ink-faint); }
+  .ccard .v { font-size:.92rem; color:var(--ink); font-weight:600; margin-top:3px; word-break:break-word; }
+
+  /* ========== FOOTER (dark) ========== */
+  .site-footer { background:#0e0f11; color:#c9ccd1; border-top:3px solid var(--accent); }
+  .foot-grid { display:grid; grid-template-columns:1.7fr 1fr 1.1fr 1.2fr; gap:40px;
+    max-width:var(--maxw); margin:0 auto; padding:clamp(46px,4.6vw,78px) var(--gutter) 40px; }
+  .foot-name { font-family:var(--serif); font-size:1.5rem; font-weight:700; color:#fff; letter-spacing:-.01em; }
+  .foot-role { font-family:var(--sans); font-size:.7rem; text-transform:uppercase; letter-spacing:1.6px;
+    color:var(--accent-2); font-weight:700; margin-top:9px; }
+  .foot-tag { font-size:.88rem; line-height:1.6; color:#9aa0a8; max-width:42ch; margin:16px 0 0; }
+  .foot-col { display:block; min-width:0; }   /* override global nav{display:flex} */
+  .foot-brand { min-width:0; }
+  .foot-col h4 { font-family:var(--sans); font-size:.68rem; text-transform:uppercase; letter-spacing:1.6px;
+    color:#7d838c; font-weight:800; margin:0 0 16px; }
+  .foot-col a, .foot-col .foot-loc { display:block; font-size:.86rem; line-height:1.45; color:#c9ccd1;
+    margin-bottom:11px; transition:color .15s ease; overflow-wrap:anywhere; }
+  .foot-col a:hover { color:var(--accent-2); }
+  .foot-col .foot-loc { color:#868c95; }
+  .foot-bar { border-top:1px solid rgba(255,255,255,.1); max-width:var(--maxw); margin:0 auto;
+    display:flex; align-items:center; justify-content:space-between; gap:16px; flex-wrap:wrap;
+    padding:20px var(--gutter); font-size:.78rem; color:#868c95; }
+  .foot-bar a { color:#c9ccd1; font-weight:600; transition:color .15s ease; }
+  .foot-bar a:hover { color:var(--accent-2); }
+
+  /* ========== RESPONSIVE ========== */
+  @media (max-width: 900px) {
+    .hero-main { grid-template-columns:1fr; gap:24px; margin-top:70px; align-items:start; }
+    .hero-figure { margin-top:34px; }
+    .split { grid-template-columns:1fr; }
+    .portrait { min-height:340px; }
+    .about-grid { grid-template-columns:1fr; gap:30px; }
+    .cv { position:static; }
+    .cgrid { grid-template-columns:repeat(2,1fr); }
+    .ms-body { padding:28px 24px; }
+    .ms-figure { padding:14px; }
+    .ms-figure video, .ms-figure img { max-height:70vh; }
+    .ms-pdf iframe { height:82vh; }
+    .foot-grid { grid-template-columns:1fr 1fr; gap:30px 40px; }
+    .contact-grid { grid-template-columns:1fr; gap:36px; }
+  }
+  @media (max-width: 620px) {
+    .panel-pad, .hero-inner, .split-left, .about.panel-pad { padding-left:24px; padding-right:24px; }
+    .hero-inner { padding:22px 22px 40px; }
+    .hero-metrics { grid-template-columns:repeat(2,1fr); }
+    .areas { grid-template-columns:1fr; }
+    .pub { grid-template-columns:1fr; }
+    .pub-figure { min-height:150px; }
+    .pub-body { padding:6px 22px 22px; }
+    .cgrid { grid-template-columns:1fr; }
+    .cf-row { grid-template-columns:1fr; }
+    .brand .sub { display:none; }
+    .nav-actions .hidesm { display:none; }
+    .hero-figure { margin-top:28px; border-radius: 0; }
+    .hero-figure figcaption { padding:12px 14px; gap:10px; }
+    .hero-figure .cap-t { font-size:.74rem; }
+    .foot-grid { grid-template-columns:1fr; gap:28px; }
+  }
+</style>
+</head>
+<body>
+<div class="frame">
+
+  <!-- ================= STICKY NAV ================= -->
+  <div class="stickynav" id="stickynav" aria-hidden="true">
+    <div class="sn-inner">
+      <a class="sn-brand" href="#top">Umesh Dhawan</a>
+      <nav class="sn-links" aria-label="Section navigation">
+        <a href="#research" class="hidesm">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#unpublished" class="hidesm">Unpublished</a>
+        <a href="#about" class="hidesm">About</a>
+        <a href="#contact" class="sn-cta">Contact ↗</a>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <header class="panel hero">
+    <div class="hero-inner">
+      <nav>
+        <div class="brand">
+          <span class="mark">
+            <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8"><path d="M6 3v4c0 3 3 4 6 5s6 2 6 5v4M18 3v4c0 3-3 4-6 5s-6 2-6 5v4M7 5h10M7 19h10"/></svg>
+          </span>
+          <span>
+            <div class="name">Umesh Dhawan</div>
+            <div class="sub">PhD · Immunology</div>
+          </span>
+        </div>
+        <div class="nav-actions">
+          <a class="pill pill-ghost hidesm" href="#research">Research</a>
+          <a class="pill pill-ghost" href="#publications">Publications</a>
+          <a class="pill pill-ghost hidesm" href="#unpublished">Unpublished</a>
+          <a class="pill pill-dark" href="#contact">Contact ↗</a>
+        </div>
+      </nav>
+
+      <div class="hero-main">
+        <div>
+          <p class="eyebrow hero-eyebrow">Immunology · Inflammation Resolution</p>
+          <h1>Inflammation<br><span class="hl">Resolution</span></h1>
+          <div class="roleline">Immunologist · The Francis Crick Institute, London</div>
+        </div>
+        <div class="hero-right">
+          <p>Uncovering how the body switches off inflammation — across cardiovascular disease, lupus, and fungal immunity — to reveal new therapeutic opportunities.</p>
+        </div>
+      </div>
+
+      <figure class="hero-figure">
+        <a href="hero.png" target="_blank" rel="noopener" aria-label="Open the full-size graphical abstract">
+          <img src="hero.png" width="1536" height="1024" loading="eager" decoding="async"
+               alt="Graphical abstract: neutrophils undergoing NETosis release NET-DNA, which induces macrophage DNase 1 and DNase 1L3. Hypercholesterolemia and ER stress blunt this response, causing NET persistence and inflammation; restoring DNase 1 clears NETs, shrinks the necrotic core of the atherosclerotic lesion, and resolves inflammation.">
+        </a>
+        <figcaption>
+          <div class="cap-t"><b>Macrophage DNases clear NET-DNA in the atherosclerotic plaque.</b> Impaired DNase responses let NETs persist and drive plaque progression — restoring DNase 1 reduces necrotic core and inflammation.</div>
+          <a class="cap-l" href="https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.125.326353" target="_blank" rel="noopener">Circulation Research 2025 ↗</a>
+        </figcaption>
+      </figure>
+    </div>
+
+    <!-- metrics ribbon -->
+    <div class="hero-metrics">
+      <div class="m"><div class="num">225+</div><div class="lbl">Citations</div></div>
+      <div class="m"><div class="num">7</div><div class="lbl">h-index</div></div>
+      <div class="m"><div class="num">6</div><div class="lbl">i10-index</div></div>
+      <div class="m"><div class="num">10+</div><div class="lbl">Publications</div></div>
+    </div>
+  </header>
+
+  <!-- ================= PUBLISHED-IN LOGO BAND ================= -->
+  <section class="logos-band" id="published-in" aria-label="Journals and publishers">
+    <div class="lb-head">
+      <span class="eyebrow">Published in</span>
+      <h2>Leading peer-reviewed journals</h2>
+    </div>
+    <div class="logo-wall">
+      <a class="logo-item" href="https://www.cell.com/cell-reports/home" target="_blank" rel="noopener" title="Cell Press">
+        <img src="logo-cellpress.png" loading="lazy" alt="Cell Press"></a>
+      <a class="logo-item tall" href="https://www.ahajournals.org" target="_blank" rel="noopener" title="American Heart Association journals">
+        <img src="logo-aha.png" loading="lazy" alt="American Heart Association"></a>
+      <a class="logo-item tall" href="https://www.elsevier.com" target="_blank" rel="noopener" title="Elsevier">
+        <img src="logo-elsevier.png" loading="lazy" alt="Elsevier"></a>
+      <a class="logo-item" href="https://www.frontiersin.org" target="_blank" rel="noopener" title="Frontiers">
+        <img src="logo-frontiers.png" loading="lazy" alt="Frontiers"></a>
+      <a class="logo-item" href="https://onlinelibrary.wiley.com" target="_blank" rel="noopener" title="Wiley">
+        <img src="logo-wiley.png" loading="lazy" alt="Wiley"></a>
+      <a class="logo-item" href="https://www.mdpi.com" target="_blank" rel="noopener" title="MDPI">
+        <img src="logo-mdpi.png" loading="lazy" alt="MDPI"></a>
+    </div>
+  </section>
+
+  <!-- ================= SPLIT: RESEARCH + PORTRAIT ================= -->
+  <section class="panel split" id="research">
+    <div class="split-left">
+      <p class="eyebrow">Research Focus</p>
+      <h2>Areas of study</h2>
+      <div class="areas">
+        <div class="area">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 21s-7-4.5-7-10a7 7 0 0 1 14 0c0 5.5-7 10-7 10Z"/><circle cx="12" cy="11" r="2.5"/></svg></span>
+          <h3>Cardiovascular Disease</h3>
+          <p>How impaired clearance of dead cells and NETs drives atherosclerotic plaque progression.</p>
+        </div>
+        <div class="area">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M9 3v5l-4 8a3 3 0 0 0 3 4h8a3 3 0 0 0 3-4l-4-8V3"/><path d="M7 3h10"/></svg></span>
+          <h3>Inflammation Resolution</h3>
+          <p>Signalling programs and vesicles through which immune cells actively end inflammation.</p>
+        </div>
+        <div class="area">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 3v4c0 3 3 4 6 5s6 2 6 5v4M18 3v4c0 3-3 4-6 5s-6 2-6 5v4M7 5h10M7 19h10"/></svg></span>
+          <h3>Lupus &amp; Autoimmunity</h3>
+          <p>Defective efferocytosis and immune dysregulation underlying systemic autoimmune disease.</p>
+        </div>
+        <div class="area">
+          <span class="chip"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></span>
+          <h3>Fungal Immunity</h3>
+          <p>How innate immunity senses fungal pathogens and tips toward protection or pathology.</p>
+        </div>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="profile.png" alt="Umesh Dhawan in front of The Francis Crick Institute">
+      <div class="quote">Advancing health through the biology of inflammation resolution.</div>
+      <div class="plabel">
+        <div class="nm">Umesh Dhawan</div>
+        <div class="rl">Postdoctoral Researcher · London, UK</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= PUBLICATIONS ================= -->
+  <section class="panel pubs panel-pad" id="publications">
+    <div class="head">
+      <div>
+        <p class="eyebrow">Selected Work</p>
+        <h2>Publications</h2>
+      </div>
+      <a class="pill pill-accent" href="https://scholar.google.com/citations?user=ibYpqxQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+    </div>
+
+    <!-- 1 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub1.jpg" loading="lazy" decoding="async"
+             alt="Immunofluorescence of an atherosclerotic plaque: macrophages (F4/80, green), DNase1/DNase1L3 (red), and DAPI nuclei (blue)">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://www.ahajournals.org/doi/10.1161/ATVBAHA.120.316389" target="_blank" rel="noopener">Hypercholesterolemia impairs clearance of neutrophil extracellular traps and promotes inflammation and atherosclerotic plaque progression</a></h3>
+        <p class="authors"><b>Dhawan U</b>, Bhattacharya, Narayanan, Manickam, Aggarwal, et al.</p>
+        <p class="venue"><em>Arteriosclerosis, Thrombosis, and Vascular Biology</em> · 41(10), 2021</p>
+        <div class="pub-cites" data-doi="10.1161/ATVBAHA.120.316389"><span class="n">63</span> Cited by</div>
+        <img class="pub-logo tall" src="logo-aha.png" loading="lazy" alt="Published by the American Heart Association">
+      </div>
+    </article>
+
+    <!-- 2 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub2.jpg" loading="lazy" decoding="async"
+             alt="Fluorescence microscopy of macrophage efferocytosis and extracellular-vesicle release">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://www.cell.com/cell-reports/fulltext/S2211-1247(23)00819-7" target="_blank" rel="noopener">Efferocytes release extracellular vesicles to resolve inflammation and tissue injury via prosaposin–GPR37 signaling</a></h3>
+        <p class="authors">Bhattacharya, <b>Dhawan U</b>, Hussain, Singh, Bhagat, Singhal, et al.</p>
+        <p class="venue"><em>Cell Reports</em> · 42(7), 2023</p>
+        <div class="pub-cites" data-doi="10.1016/j.celrep.2023.112808"><span class="n">48</span> Cited by</div>
+        <img class="pub-logo" src="logo-cellpress.png" loading="lazy" alt="Published by Cell Press">
+      </div>
+    </article>
+
+    <!-- 3 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub3.jpg" loading="lazy" decoding="async"
+             alt="Schematic of macrophage signalling governing dead-cell and NET-DNA clearance in the atherosclerotic plaque">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://doi.org/10.1016/j.phrs.2021.105699" target="_blank" rel="noopener">Dead cell and debris clearance in the atherosclerotic plaque: mechanisms and therapeutic opportunities to promote inflammation resolution</a></h3>
+        <p class="authors"><b>Dhawan U</b>, Singhal, Subramanian</p>
+        <p class="venue"><em>Pharmacological Research</em> · 170, 2021</p>
+        <div class="pub-cites" data-doi="10.1016/j.phrs.2021.105699"><span class="n">43</span> Cited by</div>
+        <img class="pub-logo tall" src="logo-elsevier.png" loading="lazy" alt="Published by Elsevier">
+      </div>
+    </article>
+
+    <!-- 4 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub4.jpg" loading="lazy" decoding="async"
+             alt="Immunofluorescence of atherosclerotic plaque (F4/80 macrophages in red, DAPI nuclei in blue) from the study">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://www.frontiersin.org/journals/pharmacology/articles/10.3389/fphar.2022.888300/full" target="_blank" rel="noopener">Pomegranate peel extract decreases plaque necrosis and advanced atherosclerosis progression in Apoe<sup>−/−</sup> mice</a></h3>
+        <p class="authors">Manickam, <b>Dhawan U</b>, Singh, Gupta, Subramanian</p>
+        <p class="venue"><em>Frontiers in Pharmacology</em> · 13, 2022</p>
+        <div class="pub-cites" data-doi="10.3389/fphar.2022.888300"><span class="n">33</span> Cited by</div>
+        <img class="pub-logo" src="logo-frontiers.png" loading="lazy" alt="Published by Frontiers">
+        <p class="pub-credit">Figure adapted (cropped) from the article · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+      </div>
+    </article>
+
+    <!-- 5 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub5.jpg" loading="lazy" decoding="async"
+             alt="Masson's trichrome histology of atherosclerotic plaques showing collagen (blue) and necrotic core">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://www.ahajournals.org/doi/10.1161/CIRCRESAHA.125.326353" target="_blank" rel="noopener">Macrophage DNases limit neutrophil extracellular trap–mediated defective efferocytosis in atherosclerosis</a></h3>
+        <p class="authors"><b>Dhawan U</b>, Vartak, Englert, Russo, Vasconcellos, Singhal, et al.</p>
+        <p class="venue"><em>Circulation Research</em> · 137(10), 2025</p>
+        <div class="pub-cites" data-doi="10.1161/CIRCRESAHA.125.326353"><span class="n">16</span> Cited by</div>
+        <img class="pub-logo tall" src="logo-aha.png" loading="lazy" alt="Published by the American Heart Association">
+      </div>
+    </article>
+
+    <!-- 6 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub6.jpg" loading="lazy" decoding="async"
+             alt="Kidney histology (H&amp;E and PAS staining) showing lupus-like glomerular pathology from the study">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://doi.org/10.1111/jcmm.17556" target="_blank" rel="noopener">Hypercholesterolemia promotes autoantibody production and a lupus-like pathology via decreased DNase-mediated clearance of DNA</a></h3>
+        <p class="authors"><b>Dhawan U</b>, Margraf, Lech, Subramanian</p>
+        <p class="venue"><em>Journal of Cellular and Molecular Medicine</em> · 26(20), 2022</p>
+        <div class="pub-cites" data-doi="10.1111/jcmm.17556"><span class="n">9</span> Cited by</div>
+        <img class="pub-logo" src="logo-wiley.png" loading="lazy" alt="Published by Wiley">
+        <p class="pub-credit">Figure adapted (cropped) from the article · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+      </div>
+    </article>
+
+    <!-- 7 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub7.jpg" loading="lazy" decoding="async"
+             alt="Fluorescence microscopy of macrophage efferocytosis of apoptotic cells">
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://doi.org/10.1161/CIRCRESAHA.125.326839" target="_blank" rel="noopener">TRIB3 links endoplasmic reticulum stress to impaired efferocytosis in atherosclerosis</a></h3>
+        <p class="authors">Singhal, Russo, <b>Dhawan U</b>, Bhutia, Bell, Hayat, et al.</p>
+        <p class="venue"><em>Circulation Research</em> · 137(12), 2025</p>
+        <div class="pub-cites" data-doi="10.1161/CIRCRESAHA.125.326839"><span class="n">5</span> Cited by</div>
+        <img class="pub-logo tall" src="logo-aha.png" loading="lazy" alt="Published by the American Heart Association">
+      </div>
+    </article>
+
+    <!-- 8 -->
+    <article class="pub">
+      <div class="pub-figure">
+        <img src="pub8.jpg" loading="lazy" decoding="async"
+             alt="Confocal microscopy of chondrocytes taking up CFSE-labelled extracellular vesicles (EV in red, DAPI nuclei in blue) from the study">
+
+      </div>
+      <div class="pub-body">
+        <h3><a href="https://doi.org/10.3390/ijms25094756" target="_blank" rel="noopener">β1-Integrin-mediated uptake of chondrocyte extracellular vesicles regulates chondrocyte homeostasis</a></h3>
+        <p class="authors">Hussain, Austin-Williams, Wright, <b>Dhawan U</b>, Pinto, et al.</p>
+        <p class="venue"><em>International Journal of Molecular Sciences</em> · 25(9), 2024</p>
+        <div class="pub-cites" data-doi="10.3390/ijms25094756"><span class="n">4</span> Cited by</div>
+        <img class="pub-logo" src="logo-mdpi.png" loading="lazy" alt="Published by MDPI">
+        <p class="pub-credit">Figure adapted (cropped) from the article · <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener">CC BY 4.0</a></p>
+      </div>
+    </article>
+  </section>
+
+  <!-- ================= UNPUBLISHED MANUSCRIPTS ================= -->
+  <section class="panel mss panel-pad" id="unpublished">
+    <div class="head">
+      <div>
+        <p class="eyebrow">In Preparation</p>
+        <h2>Unpublished manuscripts</h2>
+      </div>
+    </div>
+    <p class="lede">Current work not yet in the peer-reviewed record — new mechanisms in antifungal immunity and the metabolism of inflammation resolution.</p>
+
+    <div class="ms-cards">
+
+      <!-- Manuscript 1 -->
+      <article class="mscard" data-ms="tpl-ms1" tabindex="0" role="button"
+               aria-label="Open full details: Macrophages dismantle fungal hyphae through ARPC5-dependent actin rings">
+        <div class="mscard-img">
+          <img src="Article1_poster.jpg" loading="lazy" decoding="async"
+               alt="Confocal microscopy of a macrophage engaging a fungal hypha">
+          <span class="mscard-badge">Under revision · Science</span>
+        </div>
+        <div class="mscard-body">
+          <div class="ms-tags"><span class="t">Fungal Immunity</span><span class="t">Aspergillosis</span></div>
+          <h3>Macrophages dismantle fungal hyphae through ARPC5-dependent actin rings</h3>
+          <p>Macrophages build Arp2/3 actin rings around hyphae that sequester Dectin-1 and SHIP-1, packaging fungal cell-wall fragments into immunologically silent extracellular vesicles — revealing how antifungal inflammation is switched off.</p>
+          <div class="mscard-foot">
+            <span class="by"><b>Dhawan U</b> et al.</span>
+            <span class="mscard-open">Read more ↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Manuscript 2 -->
+      <article class="mscard" data-ms="tpl-ms2" tabindex="0" role="button"
+               aria-label="Open full details: Macrophages recycle mitochondria from engulfed apoptotic cells">
+        <div class="mscard-img">
+          <img src="Article2.jpg" loading="lazy" decoding="async"
+               alt="Graphical abstract: macrophages recycling mitochondria from engulfed apoptotic cells">
+          <span class="mscard-badge prep">In preparation</span>
+        </div>
+        <div class="mscard-body">
+          <div class="ms-tags"><span class="t">Efferocytosis</span><span class="t">Mitochondrial Metabolism</span></div>
+          <h3>Macrophages recycle mitochondria from engulfed apoptotic cells to fuel sustained efferocytosis</h3>
+          <p>Macrophages salvage mitochondria from the apoptotic cells they engulf, repolarize them, and wire them into their own network — supplying the energy for continual dead-cell clearance and driving inflammation resolution.</p>
+          <div class="mscard-foot">
+            <span class="by"><b>Dhawan U</b> et al.</span>
+            <span class="mscard-open">Read more ↗</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Manuscript 3 -->
+      <article class="mscard" data-ms="tpl-ms3" tabindex="0" role="button"
+               aria-label="Open full details: Pharmacological enhancement of efferocytosis for inflammation resolution">
+        <div class="mscard-img">
+          <img src="Article3.png" loading="lazy" decoding="async"
+               alt="Graphical abstract: a phenotypic screen identifies small molecules that enhance macrophage efferocytosis">
+          <span class="mscard-badge prep">In preparation</span>
+        </div>
+        <div class="mscard-body">
+          <div class="ms-tags"><span class="t">Drug Discovery</span><span class="t">Efferocytosis</span></div>
+          <h3>Pharmacological enhancement of efferocytosis for inflammation resolution</h3>
+          <p>A high-throughput phenotypic screen of FDA-approved and Tocris bioactive compounds identifies and validates small molecules that boost macrophage efferocytosis — a foundation for drug repurposing toward pro-resolving therapies.</p>
+          <div class="mscard-foot">
+            <span class="by"><b>Dhawan U</b> et al.</span>
+            <span class="mscard-open">Read more ↗</span>
+          </div>
+        </div>
+      </article>
+
+    </div>
+
+    <!-- full-content templates (rendered into the modal on click) -->
+    <template id="tpl-ms1">
+      <div class="ms-body">
+        <div class="ms-tags"><span class="t">Fungal Immunity</span><span class="t">Aspergillosis</span><span class="t status">Under revision · <a href="https://www.science.org" target="_blank" rel="noopener">Science</a></span></div>
+        <h3>Macrophages dismantle fungal hyphae through ARPC5-dependent actin rings that package cell-wall fragments into immunologically silent extracellular vesicles</h3>
+        <p>Pathogenic fungi are encased in rigid polysaccharide cell walls that contain potent pathogen-associated molecular patterns (PAMPs) but cannot be degraded by mammalian enzymes. During infection, fungi form large hyphae that are too large to be phagocytosed, leaving the mechanisms that eliminate persistent inflammatory cell wall material unknown. Here, we identify an actin-dependent mechanism by which macrophages dismantle fungal hyphal cell walls. Macrophages assemble specialized ARPC5-containing Arp2/3-dependent actin rings around hyphae that sequester the antifungal receptor Dectin-1 together with the inhibitory phosphatase SHIP-1, thereby limiting inflammatory signalling while packaging fungal cell wall fragments into multivesicular bodies for release as immunologically silent extracellular vesicles that disseminate to the lungs and circulation.</p>
+        <p>ARPC5-deficient macrophages fail to dismantle hyphae, resulting in Dectin-1-dependent inflammation and the release of pro-inflammatory extracellular vesicles. Consistently, macrophage-specific deletion of <em>Arpc5</em> in experimental aspergillosis impairs fungal cell wall processing and causes Dectin-1-dependent mortality. These findings reveal that post-mortem management of fungal PAMPs is essential for maintaining immune tolerance during fungal infection.</p>
+        <p class="ms-meta"><b>Dhawan U</b> et al. · Under revision at <a href="https://www.science.org" target="_blank" rel="noopener"><em>Science</em></a></p>
+      </div>
+      <div class="ms-figure">
+        <span class="mbadge"><span class="dot"></span>Live imaging</span>
+        <video autoplay muted loop playsinline controls preload="metadata" poster="Article1_poster.jpg"
+               aria-label="Time-lapse confocal microscopy of a macrophage engaging a fungal hypha">
+          <source src="Article1.mp4" type="video/mp4">
+          <source src="Article1.webm" type="video/webm">
+        </video>
+      </div>
+    </template>
+
+    <template id="tpl-ms2">
+      <div class="ms-body">
+        <div class="ms-tags"><span class="t">Efferocytosis</span><span class="t">Mitochondrial Metabolism</span><span class="t status">Unpublished · In preparation</span></div>
+        <h3>Macrophages recycle mitochondria from engulfed apoptotic cells to fuel sustained efferocytosis and inflammation resolution</h3>
+        <p>Every day, tissue macrophages eliminate 200–400 billion apoptotic cells to maintain tissue homeostasis and prevent secondary necrosis, which would otherwise release damage-associated molecular patterns (DAMPs) and drive chronic inflammation. Because apoptotic cells are often comparable to or larger than the macrophages that engulf them, continuous efferocytosis imposes an extraordinary bioenergetic burden — and how macrophages sustain this lifelong demand has remained a fundamental unanswered question.</p>
+        <p>Here, we uncover a mechanism in which macrophages selectively acquire mitochondria from engulfed apoptotic cells, restore their membrane potential through repolarization, and integrate these functional organelles into their own mitochondrial network. The recycled mitochondria enhance oxidative metabolism and ATP production, providing the energy to sustain subsequent rounds of efferocytosis, while the remaining cargo is directed to lysosomal degradation. Disrupting mitochondrial acquisition or repolarization compromises clearance, causing accumulation of dying cells, secondary necrosis, and heightened inflammation — establishing intercellular mitochondrial recycling as a fundamental driver of inflammation resolution.</p>
+        <p class="ms-meta"><b>Dhawan U</b> et al. · Manuscript in preparation</p>
+      </div>
+      <div class="ms-figure">
+        <img src="Article2.jpg" loading="lazy" decoding="async"
+             alt="Confocal microscopy showing donor (green) and host (red) mitochondria within a macrophage">
+      </div>
+    </template>
+
+    <template id="tpl-ms3">
+      <div class="ms-body">
+        <div class="ms-tags"><span class="t">Drug Discovery</span><span class="t">Efferocytosis</span><span class="t status">Unpublished · In preparation</span></div>
+        <h3>Pharmacological enhancement of efferocytosis for inflammation resolution</h3>
+        <p>Defective efferocytosis — the inefficient clearance of apoptotic cells — is a hallmark of numerous chronic inflammatory diseases, including cardiovascular disease, autoimmune disorders, fibrosis, and neurodegeneration. Despite its central role in maintaining tissue homeostasis, no approved therapies are specifically designed to enhance macrophage efferocytosis.</p>
+        <p>To address this unmet need, I developed a high-throughput phenotypic screening platform to identify small molecules that enhance macrophage efferocytosis. By screening FDA-approved drug libraries together with a curated Tocris bioactive compound collection, I identified and experimentally validated multiple compounds that significantly improve the efficiency of apoptotic cell clearance.</p>
+        <p>This work establishes a foundation for drug repurposing to therapeutically enhance inflammation resolution. Ongoing studies focus on defining the molecular mechanisms underlying these compounds and evaluating their translational potential — leveraging clinically tractable molecules with established safety profiles to accelerate the development of novel pro-resolving therapies.</p>
+        <p class="ms-meta"><b>Dhawan U</b> et al. · Manuscript in preparation</p>
+      </div>
+      <div class="ms-shot">
+        <img src="Article3.png" loading="lazy" decoding="async"
+             alt="Graphical abstract: a high-throughput phenotypic screen of FDA-approved and Tocris bioactive compounds identifies small molecules that enhance macrophage efferocytosis, advancing drug repurposing toward pro-resolving therapies for chronic inflammatory diseases.">
+      </div>
+    </template>
+  </section>
+
+  <!-- manuscript detail modal -->
+  <div class="ms-modal" id="msModal" aria-hidden="true">
+    <div class="ms-modal-scroll">
+      <div class="ms-modal-card" role="dialog" aria-modal="true" aria-label="Manuscript details">
+        <button class="ms-modal-close" id="msModalClose" type="button" aria-label="Close">✕</button>
+        <div class="ms-modal-body" id="msModalBody"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================= ABOUT ================= -->
+  <section class="panel about panel-pad" id="about">
+    <p class="eyebrow">About</p>
+    <h2>Biography</h2>
+    <div class="about-grid">
+      <div class="about-narrative">
+        <p><strong>Dr. Umesh Kumar Dhawan</strong> was born in Dausa, Rajasthan, and raised in a small rural village with limited access to education. He studied at the local government school until the fifth standard, travelled daily to a neighbouring village to continue through the eighth standard, and later moved to Dausa city to complete his secondary education.</p>
+        <p>These early challenges shaped his resilience, discipline, and belief in the transformative power of education. Fascinated by biology, he pursued a Bachelor's degree in Biotechnology at the University of Rajasthan, followed by a Master's degree in Biotechnology at the University of Allahabad after qualifying the Combined Biotechnology Entrance Examination (CEEB). His postgraduate education was supported by a fellowship from the Department of Biotechnology (DBT), Government of India.</p>
+        <p>He later qualified the <strong>CSIR-UGC NET, DBT-Junior Research Fellowship (DBT-JRF), and GATE</strong> examinations and began his doctoral research at <strong>CSIR-Institute of Genomics and Integrative Biology (CSIR-IGIB), New Delhi</strong>, under the supervision of <strong>Dr. Manikandan Subramanian</strong>. He was subsequently awarded the prestigious <strong>Queen Mary University of London Principal's Studentship</strong>, enabling him to continue his Ph.D. research at the <strong>William Harvey Research Institute</strong>, where he earned a <strong>Ph.D. in Cardiovascular Medicine</strong>. He then completed postdoctoral training at <strong>Queen Mary University of London</strong> before joining the <strong>Francis Crick Institute, London</strong>, as a <strong>Postdoctoral Fellow</strong>.</p>
+        <p>Dr. Dhawan's research focuses on understanding how the immune system resolves inflammation and maintains tissue homeostasis. His discoveries have revealed fundamental mechanisms governing the clearance of <strong>neutrophil extracellular traps (NETs)</strong>, <strong>apoptotic cells</strong>, and <strong>fungal pathogens</strong>, providing new insights into macrophage biology, inflammation resolution, and chronic inflammatory diseases.</p>
+        <p>From a small village in Rajasthan to one of the world's leading biomedical research institutes, his journey reflects the power of perseverance, scientific curiosity, and opportunity. His long-term vision is to establish an internationally recognised research programme in India dedicated to understanding inflammation resolution and immune homeostasis while mentoring the next generation of scientists, particularly those from rural and underrepresented communities.</p>
+        <blockquote class="pq">His story carries a simple message: where you begin does not define how far you can go.</blockquote>
+      </div>
+      <aside class="cv">
+        <h3>Education &amp; Career</h3>
+        <div class="row"><span class="step">Early education</span><span class="where">Dausa, Rajasthan, India</span></div>
+        <div class="row"><span class="step">BSc, Biotechnology</span><span class="where"><a href="https://www.uniraj.ac.in" target="_blank" rel="noopener">University of Rajasthan</a></span></div>
+        <div class="row"><span class="step">MSc, Biotechnology</span><span class="where"><a href="https://www.allduniv.ac.in" target="_blank" rel="noopener">University of Allahabad</a> · DBT Fellowship</span></div>
+        <div class="row"><span class="step">PhD, Cardiovascular Medicine</span><span class="where"><a href="https://www.igib.res.in" target="_blank" rel="noopener">CSIR-IGIB</a> → <a href="https://www.qmul.ac.uk/whri/" target="_blank" rel="noopener">William Harvey Research Institute, QMUL</a> · Principal's Studentship</span></div>
+        <div class="row"><span class="step">Postdoctoral Fellowship</span><span class="where"><a href="https://www.qmul.ac.uk" target="_blank" rel="noopener">Queen Mary University of London</a></span></div>
+        <div class="row"><span class="step">Postdoctoral Fellow</span><span class="where"><a href="https://www.crick.ac.uk" target="_blank" rel="noopener">The Francis Crick Institute</a>, London</span></div>
+      </aside>
+    </div>
+    <div class="journals">
+      <span class="jchip">Circulation Research</span>
+      <span class="jchip">Cell Reports</span>
+      <span class="jchip">ATVB</span>
+      <span class="jchip">Pharmacological Research</span>
+      <span class="jchip">Frontiers in Pharmacology</span>
+      <span class="jchip">J Cellular &amp; Molecular Medicine</span>
+      <span class="jchip">Int. J. Molecular Sciences</span>
+    </div>
+  </section>
+
+  <!-- ================= CONTACT ================= -->
+  <section class="panel contact panel-pad" id="contact">
+    <p class="eyebrow">Contact</p>
+    <h2>Get in touch</h2>
+    <p class="contact-lede">Interested in collaboration, a talk, or a question about the research? Send a message below, or reach me directly.</p>
+
+    <div class="contact-grid">
+      <!-- Form posts to FormSubmit (no backend needed). Swap the address in `action` to change the recipient. -->
+      <form class="contact-form" id="contactForm" action="https://formsubmit.co/ajax/umesh.dhawan@crick.ac.uk" method="POST">
+        <div class="cf-row">
+          <div class="cf-field">
+            <label for="cf-name">Name</label>
+            <input id="cf-name" name="name" type="text" autocomplete="name" required>
+          </div>
+          <div class="cf-field">
+            <label for="cf-email">Email</label>
+            <input id="cf-email" name="email" type="email" autocomplete="email" required>
+          </div>
+        </div>
+        <div class="cf-field">
+          <label for="cf-subject">Subject</label>
+          <input id="cf-subject" name="subject" type="text">
+        </div>
+        <div class="cf-field">
+          <label for="cf-message">Message</label>
+          <textarea id="cf-message" name="message" rows="6" required></textarea>
+        </div>
+        <!-- honeypot (hidden from users; bots fill it) -->
+        <input type="text" name="_honey" class="cf-honey" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <input type="hidden" name="_subject" value="New enquiry from your website">
+        <input type="hidden" name="_template" value="table">
+        <button type="submit" class="cf-submit">Send message</button>
+        <p class="cf-note" id="cfNote" role="status" aria-live="polite"></p>
+      </form>
+
+      <div class="contact-side">
+        <a class="ccard" href="mailto:umesh.dhawan@crick.ac.uk">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg></span>
+          <div class="k">Email</div><div class="v">umesh.dhawan@crick.ac.uk</div>
+        </a>
+        <div class="ccard">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 21h18M5 21V8l7-4 7 4v13M9 21v-6h6v6"/></svg></span>
+          <div class="k">Institution</div><div class="v">The Francis Crick Institute, London</div>
+        </div>
+        <a class="ccard" href="https://scholar.google.com/citations?user=ibYpqxQAAAAJ&hl=en" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 3 2 9l10 6 8-4.8V15M6 12.5V17c0 1.1 2.7 3 6 3s6-1.9 6-3v-4.5"/></svg></span>
+          <div class="k">Google Scholar</div><div class="v">View profile ↗</div>
+        </a>
+        <a class="ccard" href="https://orcid.org/0009-0001-5395-5527" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M9 8h.01"/></svg></span>
+          <div class="k">ORCID</div><div class="v">0009-0001-5395-5527 ↗</div>
+        </a>
+        <a class="ccard" href="https://www.linkedin.com/in/umesh-dhawan-phd-8a0987399" target="_blank" rel="noopener">
+          <span class="ic"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1-.02 5.001 2.5 2.5 0 0 1 .02-5zM3 9h4v12H3zM9 9h3.83v1.64h.05c.53-.95 1.83-1.96 3.77-1.96 4.03 0 4.78 2.65 4.78 6.1V21h-4v-5.4c0-1.29-.02-2.95-1.8-2.95-1.8 0-2.07 1.4-2.07 2.85V21H9z"/></svg></span>
+          <div class="k">LinkedIn</div><div class="v">in/umesh-dhawan-phd ↗</div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <div class="foot-name">Umesh Dhawan</div>
+        <div class="foot-role">PhD · Immunology · Inflammation Resolution</div>
+        <p class="foot-tag">Uncovering how the body switches off inflammation — across cardiovascular disease, lupus, and fungal immunity — to reveal new therapeutic opportunities.</p>
+      </div>
+      <nav class="foot-col" aria-label="Site sections">
+        <h4>Explore</h4>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#unpublished">Unpublished</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <nav class="foot-col" aria-label="Academic profiles">
+        <h4>Profiles</h4>
+        <a href="https://scholar.google.com/citations?user=ibYpqxQAAAAJ&hl=en" target="_blank" rel="noopener">Google Scholar ↗</a>
+        <a href="https://orcid.org/0009-0001-5395-5527" target="_blank" rel="noopener">ORCID ↗</a>
+        <a href="https://www.linkedin.com/in/umesh-dhawan-phd-8a0987399" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://www.crick.ac.uk" target="_blank" rel="noopener">The Francis Crick Institute ↗</a>
+      </nav>
+      <nav class="foot-col" aria-label="Contact details">
+        <h4>Contact</h4>
+        <a href="mailto:umesh.dhawan@crick.ac.uk">umesh.dhawan@crick.ac.uk</a>
+        <span class="foot-loc">The Francis Crick Institute<br>1 Midland Road, London NW1 1AT</span>
+      </nav>
+    </div>
+    <div class="foot-bar">
+      <span>© <span id="yr"></span> Umesh Dhawan · All rights reserved.</span>
+      <a href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+</div>
+<script>
+  document.getElementById('yr').textContent = new Date().getFullYear();
+
+  /* Sticky nav: reveal once the hero has scrolled out of view */
+  (function () {
+    var sticky = document.getElementById('stickynav');
+    var hero = document.querySelector('.hero');
+    if (sticky && hero && 'IntersectionObserver' in window) {
+      new IntersectionObserver(function (entries) {
+        var e = entries[0];
+        sticky.classList.toggle('show', !e.isIntersecting);
+        sticky.setAttribute('aria-hidden', e.isIntersecting ? 'true' : 'false');
+      }, { rootMargin: '-72px 0px 0px 0px' }).observe(hero);
+
+      /* Highlight the section currently in view */
+      var links = Array.prototype.slice.call(sticky.querySelectorAll('.sn-links a[href^="#"]'));
+      var byId = {};
+      links.forEach(function (a) { byId[a.getAttribute('href').slice(1)] = a; });
+      var secObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (en) {
+          var a = byId[en.target.id];
+          if (a && en.isIntersecting) {
+            links.forEach(function (l) { l.classList.remove('active'); });
+            a.classList.add('active');
+          }
+        });
+      }, { rootMargin: '-45% 0px -50% 0px' });
+      ['research', 'publications', 'unpublished', 'about', 'contact'].forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) secObs.observe(el);
+      });
+    }
+  })();
+
+  /* Live "Cited by" counts from OpenAlex (by DOI), cached 24h; falls back to the numbers in the HTML */
+  (function () {
+    var chips = [].slice.call(document.querySelectorAll('.pub-cites[data-doi]'));
+    if (!chips.length || !window.fetch) return;
+    function apply(map) {
+      chips.forEach(function (c) {
+        var v = map[c.getAttribute('data-doi').toLowerCase()];
+        if (v != null) { var n = c.querySelector('.n'); if (n) n.textContent = v; }
+      });
+    }
+    var KEY = 'cites_openalex_v1', TTL = 86400000; // 24h
+    try {
+      var cx = JSON.parse(localStorage.getItem(KEY) || 'null');
+      if (cx && (Date.now() - cx.t) < TTL) { apply(cx.m); return; }
+    } catch (e) {}
+    var dois = chips.map(function (c) { return c.getAttribute('data-doi'); });
+    var url = 'https://api.openalex.org/works?filter=doi:' + dois.join('|') +
+              '&select=doi,cited_by_count&per-page=' + dois.length + '&mailto=designs.words@gmail.com';
+    fetch(url).then(function (r) { return r.ok ? r.json() : null; }).then(function (d) {
+      if (!d || !d.results) return;
+      var map = {};
+      d.results.forEach(function (w) {
+        if (w.doi) map[w.doi.replace(/^https?:\/\/doi\.org\//i, '').toLowerCase()] = w.cited_by_count;
+      });
+      apply(map);
+      try { localStorage.setItem(KEY, JSON.stringify({ t: Date.now(), m: map })); } catch (e) {}
+    }).catch(function () { /* keep the fallback numbers already in the HTML */ });
+  })();
+
+  /* Contact form → submit via fetch, show inline status (no page redirect) */
+  (function () {
+    var form = document.getElementById('contactForm');
+    if (!form) return;
+    var note = document.getElementById('cfNote');
+    var btn  = form.querySelector('.cf-submit');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      if (form.querySelector('[name="_honey"]').value) return;   // bot filled honeypot
+      var original = btn.textContent;
+      note.textContent = ''; note.className = 'cf-note';
+      btn.disabled = true; btn.textContent = 'Sending…';
+      fetch(form.action, { method: 'POST', headers: { 'Accept': 'application/json' }, body: new FormData(form) })
+        .then(function (r) { return r.json().catch(function () { return {}; }); })
+        .then(function (res) {
+          if (res && (res.success === 'true' || res.success === true)) {
+            form.reset();
+            note.textContent = 'Thanks — your message has been sent.';
+            note.className = 'cf-note ok';
+          } else {
+            note.textContent = (res && res.message) ? res.message
+              : 'Sorry, something went wrong. Please email umesh.dhawan@crick.ac.uk directly.';
+            note.className = 'cf-note err';
+          }
+        })
+        .catch(function () {
+          note.textContent = 'Network error — please email umesh.dhawan@crick.ac.uk directly.';
+          note.className = 'cf-note err';
+        })
+        .finally(function () { btn.disabled = false; btn.textContent = original; });
+    });
+  })();
+
+  /* Manuscript cards → open full content in a modal */
+  (function () {
+    var modal = document.getElementById('msModal');
+    var body  = document.getElementById('msModalBody');
+    var closeBtn = document.getElementById('msModalClose');
+    if (!modal || !body) return;
+
+    function open(tplId) {
+      var tpl = document.getElementById(tplId);
+      if (!tpl) return;
+      body.innerHTML = '';
+      body.appendChild(tpl.content.cloneNode(true));
+      modal.classList.add('open');
+      modal.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('modal-open');
+      modal.querySelector('.ms-modal-scroll').scrollTop = 0;
+      closeBtn.focus();
+    }
+    function close() {
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden', 'true');
+      document.body.classList.remove('modal-open');
+      body.innerHTML = '';   // unload video / PDF iframe
+    }
+
+    document.querySelectorAll('.mscard[data-ms]').forEach(function (card) {
+      card.addEventListener('click', function () { open(card.getAttribute('data-ms')); });
+      card.addEventListener('keydown', function (e) {
+        if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); open(card.getAttribute('data-ms')); }
+      });
+    });
+    closeBtn.addEventListener('click', close);
+    // close on backdrop click (outside the card)
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal || e.target.classList.contains('ms-modal-scroll')) close();
+    });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('open')) close();
+    });
+  })();
+</script>
+</body>
+</html>

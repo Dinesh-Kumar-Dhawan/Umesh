@@ -1,0 +1,13 @@
+# Normalize text to LF; treat media as binary so Git doesn't mangle it
+* text=auto eol=lf
+
+*.png  binary
+*.jpg  binary
+*.jpeg binary
+*.gif  binary
+*.webp binary
+*.svg  text
+*.pdf  binary
+*.mp4  binary
+*.webm binary
+*.avi  binary

@@ -1,0 +1,18 @@
+# ---- OS / editor cruft ----
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+*~
+.vscode/
+.idea/
+
+# ---- Vercel ----
+.vercel/
+
+# ---- Working / source files not part of the published site ----
+Unpublished.docx
+*.docx
+Video1.avi
+*.avi
+ChatGPT Image*.png
